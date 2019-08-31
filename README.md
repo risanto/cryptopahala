@@ -15,7 +15,7 @@ Cryptopahala merupakan sebuah platform investasi pahala yang akan menghitung jum
 
 ### Planned features
 
-- Mine pahala
-- Trade pahala
+- Mining
+- Trading
 - Live investment tracker
 
