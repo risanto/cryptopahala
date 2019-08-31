@@ -2,7 +2,7 @@
 
 Tertarik berinvestasi? Klik: **https://risanto.github.io/cryptopahala/**
 
-![alt text] (https://github.com/risanto/cryptopahala/blob/master/img/header2.png)
+![] (img/header2.png)
 
 ### About
 
