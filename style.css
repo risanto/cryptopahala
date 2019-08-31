@@ -1,3 +1,5 @@
+/* >>> All >>> */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,14 +7,23 @@
   font-family: 'Rubik', sans-serif;
 }
 
-/* Page 1 */
-
-#page1 {
+body {
   display: flex;
   height: 100vh;
-  /* background: #224CC0; */
   flex-direction: column;
+  background: rgb(255, 255, 255);
 }
+
+
+/* >>> Colors >>> */
+
+/*
+brand-blue
+background: #224CC0;
+*/
+
+
+/* >>> Page 1 >>> */
 
 .header-img {
   width: 100%;
@@ -51,48 +62,44 @@
   cursor: pointer;
 }
 
-/* Page 2 */
+
+/* >>> Page 2 >>> */
 
 #page2 {
-  display: flex;
-  height: 100vh;
-  background: rgb(173, 216, 230);
-  flex-direction: column;
+  /* use transition so when it changes background it doesn't look too abrupt; ease: specifies a transition effect with a slow start, then fast, then end slowly (this is default)*/
   transition: background 0.5s ease;
-  position: relative;
-  z-index: -5;
-}
 
-.field-question {
-  background: white;
-  color: #224CC0;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 10%;
-  padding: 5%;
-  text-align: center;
-  justify-content: space-between;
-  /* top: 50%;
-  left: 50%; */
+  /* use position: relative to help move elements on top of each other */
+  position: relative;
 }
 
 .field-baik,
 .field-buruk,
-.field-finish {
+.field-hasil {
+  /* center all the elements relative to the page and make them immovable with absolute */
   position: absolute;
-  margin: 1%;
-  padding-left: 1%;
   top: 50%;
   left: 50%;
+
+  /* reposition the elements to make them more centered */
   transform: translate(-50%, -50%);
-  background: white;
-  height: 50px;
+  
+  padding: 10px;
+  height: 100px;
   width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: all 0.5s ease;
+  background: rgb(34, 76, 192);
+  color: white;
+  flex-direction: column;
+}
+
+.field-inside {
+  display: flex;
+  padding: 10px;
 }
 
 .field-baik i,
@@ -103,21 +110,48 @@
 
 .field-baik input,
 .field-buruk input {
+  /* remove border */
   background: none;
   border: none;
-  flex: 1;
-  height: 100%;
+  width: 300px;
+  background: white;
+  padding-left: 10px;
   outline: none;
+}
+
+.field-hasil {
+  border: 5px solid white;
+  flex-direction: column;
+  height: 300px;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.field-hasil h2 {
+  padding: 10px;
+  opacity: 1;
+}
+
+.field-hasil img {
+  width: 50px;
 }
 
 div.inactive {
   opacity: 0;
+
+  /* make sure that the inactive element can't be clicked */
   pointer-events: none;
-  transform: translate(-50%, -50%);
+
+  /* move the elements some place else while they're inactive */
+  transform: translate(-50%, 50%);
 }
 
 div.active {
   opacity: 1;
+
+  /* elements can be clicked again */
   pointer-events: all;
+
+  /* move the elements back to their original position */
   transform: translate(-50%, -50%);
 }

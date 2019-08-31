@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ayo hitung pahalamu! - Cryptopahala</title>
+  <!-- Why doesn't the icon work? -->
+  <link rel="shortcut icon" type="image/png" href="./img/logo-blue2.png"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/de3ccd32b5.js"></script>
+</head>
+<body id="page2">
+
+  <form>
+    <div class="field-baik form">
+      <p>Apa perbuatan baik yang terakhir kamu lakukan?</p>
+      <div class="field-inside">
+        <input type="text" name="baik" placeholder="contoh: belok kanan sen-nya ke kanan" required>
+        <i class="far fa-smile-wink clickable"></i>
+      </div>
+    </div>
+
+    <div class="field-buruk inactive form">
+      <p>Apa perbuatan buruk yang terakhir kamu lakukan?</p>
+      <div class="field-inside">
+        <input type="text" name="buruk" placeholder="contoh: makan harta anak yatim" required>
+        <i class="fas fa-book-dead clickable"></i>
+      </div>
+    </div>
+
+    <div class="field-hasil inactive">
+      <img src="./img/logo-white.png" alt="logo">
+      <h2 class="hasil">Total pahala: </h2>
+    </div>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>
